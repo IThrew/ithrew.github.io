@@ -18,6 +18,7 @@
                 letter-spacing: .1em;
                 animation:
                     typing 2.5s steps(20, end),
+                    blink-caret .75s step-end infinite;
             }
 
             .subtitle {
@@ -30,6 +31,7 @@
                 opacity: 0;
                 animation:
                     typing-sub 3s steps(40, end) 2.7s forwards,
+                    blink-caret .75s step-end infinite 2.7s;
             }
 
             @keyframes typing {
@@ -40,6 +42,11 @@
             @keyframes typing-sub {
                 from { width: 0; opacity: 1; }
                 to { width: 100%; opacity: 1; }
+            }
+
+            @keyframes blink-caret {
+                from, to { border-color: transparent }
+                50% { border-color: #202124; }
             }
         </style>
     </head>
