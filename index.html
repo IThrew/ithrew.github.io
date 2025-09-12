@@ -1,35 +1,77 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="stuff :-O">
-    <meta name="author" content="I_Threw">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I Definetly Threw.</title>
-    <link rel="stylesheet" href="style.css" />
+        <meta charset="UTF-8">
+        <meta name="description" content="stuff :-O">
+        <meta name="author" content="I_Threw">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>I Definetly Threw.</title>
+        <link rel="stylesheet" href="style.css" />
 
+        <style>
+            .typing {
+                font-family: "Lucida Console", Monaco, monospace;
+                overflow: hidden;
+                border-right: .15em solid #000;
+                white-space: nowrap;
+                margin: 0 auto;
+                letter-spacing: .1em;
+                animation:
+                    typing 2.5s steps(20, end),
+                    blink-caret .75s step-end infinite;
+            }
+
+            .subtitle {
+                font-family: "Lucida Console", Monaco, monospace;
+                overflow: hidden;
+                border-right: .15em solid #000;
+                white-space: nowrap;
+                margin: 0 auto;
+                letter-spacing: .05em;
+                opacity: 0;
+                animation:
+                    typing-sub 3s steps(40, end) 2.7s forwards,
+                    blink-caret .75s step-end infinite 2.7s;
+            }
+
+            @keyframes typing {
+                from { width: 0 }
+                to { width: 100% }
+            }
+
+            @keyframes typing-sub {
+                from { width: 0; opacity: 1; }
+                to { width: 100%; opacity: 1; }
+            }
+
+            @keyframes blink-caret {
+                from, to { border-color: transparent }
+                50% { border-color: black; }
+            }
+        </style>
     </head>
 
     <body>
         <header>
-            <h1>I_Threw</h1>
-            <p>I am absolute SHIT at Video Games.</p>
+            <h1 class="typing">I_Threw</h1>
+            <p class="subtitle">I am absolute SHIT at Video Games.</p>
             <hr>
         </header>
         
         <div>
-        <a href="Lowercase-Typing">Lowercase Typing</a>
-        <br><br>
-        <a href="play-dust-online">Play Dust</a>
-        <br><br>
-        <a href="Dust.py" download>Download Dust (Python 3.11)</a>
+            <a href="Lowercase-Typing">Lowercase Typing</a>
+            <br><br>
+            <a href="play-dust-online">Play Dust</a>
+            <br><br>
+            <a href="Dust.py" download>Download Dust (Python 3.11)</a>
         </div>
+
         <footer>
             <div class="footer">
               <a href="https://github.com/IThrew/ithrew.github.io">Source Code</a>
               &nbsp;
               <a href="https://www.python.org/">Python</a>
-        </div>
+            </div>
         </footer>
     </body>
 </html>
