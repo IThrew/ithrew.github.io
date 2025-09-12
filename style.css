@@ -2,6 +2,35 @@ body{
 background-color: #202124;
 color: #ffffff;
 }
+
+.typing {
+    font-family: "Lucida Console", Monaco, monospace;
+    overflow: hidden;             /* hides text until it's typed */
+    border-right: .15em solid #000; /* blinking cursor */
+    white-space: nowrap;          /* keeps text on one line */
+    margin: 0 auto;
+    letter-spacing: .1em;
+    animation:
+        typing 3.5s steps(30, end),
+        blink-caret .75s step-end infinite;
+}
+
+.subtitle {
+    font-family: "Lucida Console", Monaco, monospace;
+    margin-top: 0.5em;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black; }
+}
+
+
 .heading {
    text-align: center;
    position: fixed;
